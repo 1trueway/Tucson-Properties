@@ -38,7 +38,7 @@ var lyr_25mAbove_2 = new ol.layer.VectorTile({
 	source: new ol.source.VectorTile({
 		attributions: ' ',
 		format: new ol.format.MVT(),
-		url: 'Vectors/{z}/{x}/{y}.pbf'
+		url: 'Vector/{z}/{x}/{y}.pbf'
 	})
 });
 var group_Vectors = new ol.layer.Group({
