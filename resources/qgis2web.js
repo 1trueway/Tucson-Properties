@@ -984,7 +984,6 @@ document.addEventListener('DOMContentLoaded', function() {
 //my stuff
 
 map.on('moveend', function() {
-	var extentCoords = getExtent();
 	jsonSource_25mAbove_2.refresh();
 });
 
