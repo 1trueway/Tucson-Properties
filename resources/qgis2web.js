@@ -991,7 +991,10 @@ function refresh(layer) {
     var source = layer.getSource();
     source.tileCache.expireCache({});
     source.tileCache.clear();
-    source.refresh();
+    source.clear();
+    source.refresh({force: true});
+
+    layer.redraw();
 }
 
 
