@@ -984,8 +984,15 @@ document.addEventListener('DOMContentLoaded', function() {
 //my stuff
 
 map.on('moveend', function() {
-	jsonSource_25mAbove_2.refresh();
+	refresh(lyr_25mAbove_2);
 });
+
+function refresh(layer) {
+    var source = layer.getSource();
+    source.tileCache.expireCache({});
+    source.tileCache.clear();
+    source.refresh();
+}
 
 
 //move controls inside containers, in order
