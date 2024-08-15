@@ -30,16 +30,17 @@ var lyr_25mAboveSaved_1 = new ol.layer.Vector({
                 title: '<img src="styles/legend/25mAboveSaved_1.png" /> 2.5m & Above (Saved)'
             });
 
+var jsonSource_25mAbove_2 = new ol.source.VectorTile({
+	attributions: ' ',
+	format: new ol.format.MVT(),
+	url: 'Vector/{z}/{x}/{y}.pbf'
+});
 var lyr_25mAbove_2 = new ol.layer.VectorTile({
 	'title': '2.5m & Above',
 	//'type': 'base',
 	'opacity': 1.000000,
 	
-	source: new ol.source.VectorTile({
-		attributions: ' ',
-		format: new ol.format.MVT(),
-		url: 'Vector/{z}/{x}/{y}.pbf'
-	})
+	source: jsonSource_25mAbove_2
 });
 var group_Vectors = new ol.layer.Group({
                                 layers: [],
